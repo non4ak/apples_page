@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Clash Grotesk";
-    src: url('./fonts/ClashGrotesk-Variable.ttf') format("truetype");
+    src: url('/fonts/ClashGrotesk-Variable.ttf') format("truetype");
 }
 
 @theme {
@@ -12,8 +12,8 @@
 html,
 body {
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: #fff;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -29,4 +29,42 @@ body {
 
 @utility abs-center {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@layer components {
+    main {
+        @apply w-full overflow-x-hidden;
+    }
+
+    nav {
+        @apply fixed z-50 w-full;
+
+        div {
+            @apply flex flex-col md:flex-row justify-between items-center gap-5 py-5 px-5 lg:px-0 container mx-auto;
+        }
+
+        ul {
+            @apply flex flex-row gap-5;
+        }
+
+        a {
+            @apply cursor-pointer text-base md:text-lg;
+        }
+
+        h1 {
+            @apply font-clash text-3xl;
+        }
+    }
+
+    .body {
+        @apply container flex justify-between gap-4 md:gap-12 mx-auto absolute left-1/2 -translate-x-1/2 top-80;
+
+        p {
+            @apply text-sm sm:text-base md:text-xl lg:text-2xl font-semibold;
+        }
+    }
+
+    video {
+        @apply w-full h-full object-cover lg:object-contain;
+    }
 }

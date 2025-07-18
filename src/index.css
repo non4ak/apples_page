@@ -7,6 +7,8 @@
 
 @theme {
     --font-clash: "Clash Grotesk", sans-serif;
+    --card-color: #9a031e;
+    --font-arial: Arial, sans-serif;
 }
 
 html,
@@ -37,7 +39,7 @@ body {
     }
 
     nav {
-        @apply fixed z-50 w-full;
+        @apply fixed z-51 w-full;
 
         div {
             @apply flex flex-col md:flex-row justify-between items-center gap-5 py-5 px-5 lg:px-0 container mx-auto;
@@ -57,14 +59,40 @@ body {
     }
 
     .body {
-        @apply container flex justify-between gap-4 md:gap-12 mx-auto absolute left-1/2 -translate-x-1/2 top-80;
+        @apply container flex justify-between gap-4 md:gap-12 mx-auto absolute left-1/2 -translate-x-1/2 top-60;
 
-        p {
-            @apply text-sm sm:text-base md:text-xl lg:text-2xl font-semibold;
-        }
     }
 
     video {
-        @apply w-full h-full object-cover lg:object-contain;
+        @apply w-full h-[100%] object-cover md:object-cover;
+
+    }
+
+    .bg-card {
+        background-color: #240101;
+    }
+
+    .info {
+        @apply container bg-black border border-amber-200 rounded-3xl mx-auto z-50 relative h-[600px] md:h-128 p-12;
+
+        .left-apple {
+            @apply absolute left-0 -translate-x-24 md:-translate-x-48 md:top-72 rotate-24 md:bottom-auto -bottom-20 md:w-102 w-64 brightness-95 select-none;
+        }
+
+        .middle-apple {
+            @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80;
+        }
+
+        div {
+            @apply flex flex-col w-full justify-between h-full py-8 px-4;
+        }
+
+        p {
+            @apply text-sm font-arial md:text-base self-start w-64 text-gray-300;
+        }
+
+        p:nth-last-child(1) {
+            @apply self-end;
+        }
     }
 }

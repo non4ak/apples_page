@@ -46,8 +46,6 @@ export default function Hero() {
             }
         })
 
-
-
         // videoRef.current.onloadedmetadata = () => {
         //     tl.to(videoRef.current, {
         //         currentTime: videoRef.current.duration,

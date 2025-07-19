@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import Navbar from './components/NavBar.jsx';
 import Hero from './components/Hero.jsx';
 import Info from './components/Info.jsx';
+import Menu from './components/Menu.jsx';
+import About from './components/About.jsx';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -12,7 +14,9 @@ function App() {
     <main>
       <Navbar />
       <Hero />
-      <Info />
+      <About />
+      {/* <Info /> */}
+      <Menu />
       <div className='h-dvh w-full'></div>
     </main>
   )

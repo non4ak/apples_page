@@ -25,6 +25,20 @@ body {
     @apply flex justify-center items-center;
 }
 
+@utility radial-gradient {
+    /* background: radial-gradient(
+            circle at center,
+            #A6925E 0%,
+            #000 60%,
+            transparent 100%
+    ); */
+background: #30302d;
+background: radial-gradient(circle,rgba(48, 48, 45, 1) 0%, rgba(0, 0, 0, 1) 50%);
+
+
+}
+
+
 @utility col-center {
     @apply flex flex-col justify-center items-center;
 }
@@ -73,7 +87,7 @@ body {
     }
 
     .info {
-        @apply container bg-black border border-amber-200 rounded-3xl mx-auto z-50 relative h-[600px] md:h-128 p-12;
+        @apply w-full bg-black  mx-auto z-50 relative h-[600px] md:h-128 p-12;
 
         .left-apple {
             @apply absolute left-0 -translate-x-24 md:-translate-x-48 md:top-72 rotate-24 md:bottom-auto -bottom-20 md:w-102 w-64 brightness-95 select-none;

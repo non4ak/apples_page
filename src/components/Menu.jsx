@@ -30,10 +30,10 @@ export default function Menu() {
     }
 
     return (
-        <section className="container mx-auto mt-16 py-16 radial-gradient h-screen">
-            <h2 className="text-center font-clash text-5xl font-semibold tracking-wide">Choose your Apple</h2>
+        <section className="container mx-auto py-20 md:py-36 lg:py-48 radial-gradient max-h-[120dvh]">
+            <h2 className="text-center font-clash text-5xl md:text-6xl font-semibold tracking-wide">Choose your Apple</h2>
 
-            <div className="flex justify-center gap-12 py-4">
+            <div className="flex justify-center gap-8 md:gap-16 py-8">
                 {APPLES_MENU.map((item, index) => {
                     const isActive = index === currentIndex;
 
@@ -49,7 +49,7 @@ export default function Menu() {
             </div>
 
             <div className="w-full flex relative justify-center">
-                <div className="justify-between w-full flex px-18 absolute top-1/2 -translate-y-1/2">
+                <div className="justify-between w-full flex px-8 md:px-18 absolute top-1/3 lg:top-1/2 -translate-y-1/2">
                     <button onClick={() => goToIndex(currentIndex - 1)} className="cursor-pointer select-none">
                         <img src="/imgs/right-arrow.png"/>
                     </button>
@@ -58,11 +58,11 @@ export default function Menu() {
                     </button>
                 </div>
 
-                <div className="flex-center flex-col md:flex-row gap-8 ">
+                <div className="flex-center flex-col xl:flex-row gap-8 ">
                     <img
                         src={APPLES_MENU[currentIndex].img}
                         alt="currently shown apple from menu"
-                        className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] object-contain"
+                        className="w-[350px] h-[350px] lg:w-[450px] lg:h-[450px] object-contain"
                         id="current-apple"
                     />
                     <div id="details" className="w-[450px] space-y-4 ">
@@ -70,7 +70,6 @@ export default function Menu() {
                         <p className="text-base md:text-lg text-gray-300">{APPLES_MENU[currentIndex].description}</p>
                     </div>
                 </div>
-                
             </div>
         </section>
     )

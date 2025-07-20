@@ -24,3 +24,21 @@ export const APPLES_MENU = [
     img: '/imgs/yellow-apple.png',
   }
 ];
+
+export const REVIEWS = [
+  {
+    id: '21bfds',
+    name: "Slavik",
+    comment: "The apples were fresh and delicious! Definitely recommend this place. The apples were fresh and delicious! Definitely recommend this place."
+  },
+  {
+    id: '7dfjvl',
+    name: "Oksana",
+    comment: "Beautiful orchard and friendly staff. A great family experience. The apples were fresh and delicious! Definitely recommend this place."
+  },
+  // {
+  //   id: 'a2l58n',
+  //   name: "Andrii",
+  //   comment: "Loved the variety of apples available. Will come back next season! The apples were fresh and delicious! Definitely recommend this place. "
+  // }
+];

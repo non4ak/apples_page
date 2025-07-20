@@ -56,7 +56,7 @@ export default function Hero() {
     return (
         <>
             <section  className="z-10 relative min-h-dvh w-full">
-                <h1 id="title" className="text-5xl md:text-9xl font-extrabold font-clash tracking-wider mt-40 text-center leading-none  ">Bite into Sweetness</h1>
+                <h1 id="title" className="text-7xl md:text-9xl font-extrabold font-clash tracking-wider mt-40 text-center leading-none  ">Bite into Sweetness</h1>
 
                 <div className="body">
                     <Card

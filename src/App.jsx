@@ -5,6 +5,8 @@ import Hero from './components/Hero.jsx';
 import Info from './components/Info.jsx';
 import Menu from './components/Menu.jsx';
 import About from './components/About.jsx';
+import Art from './components/Art.jsx';
+import Form from './components/Form.jsx';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -17,8 +19,10 @@ function App() {
       <About />
       {/* <Info /> */}
       <Menu />
-      <div className='h-dvh w-full'></div>
+      <Art />
+      <Form />
     </main>
+
   )
 }
 

@@ -30,7 +30,7 @@ export default function Menu() {
     }
 
     return (
-        <section className="container mx-auto py-20 md:py-36 lg:py-48 radial-gradient max-h-[120dvh]">
+        <section className="container mx-auto py-20 md:py-36 lg:py-32 radial-gradient max-h-[120dvh]">
             <h2 className="text-center font-clash text-5xl md:text-6xl font-semibold tracking-wide">Choose your Apple</h2>
 
             <div className="flex justify-center gap-8 md:gap-16 py-8">

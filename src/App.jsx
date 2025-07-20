@@ -7,6 +7,7 @@ import Menu from './components/Menu.jsx';
 import About from './components/About.jsx';
 import Art from './components/Art.jsx';
 import Form from './components/Form.jsx';
+import Footer from './components/Footer.jsx';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -21,6 +22,7 @@ function App() {
       <Menu />
       <Art />
       <Form />
+      <Footer />
     </main>
 
   )

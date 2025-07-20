@@ -26,10 +26,10 @@ export default function Art() {
 
     return (
         <section id="art">
-            <h2 className="will-fade">The work behind the scenes</h2>
+            <h2 className="will-fade">The Orchard Whispers with Labor</h2>
             <img src="/imgs/man-collecting-apples.jpg" alt="A man collecting apples" className="abs-center masked-img rounded-4xl"/>
             <div>
-                <h2 className="will-show">People work a lot</h2>
+                <h2 className="will-show">This isn’t just about apples — it’s about the people</h2>
             </div>
         </section>
     )

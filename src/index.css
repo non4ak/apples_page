@@ -131,23 +131,23 @@ background: radial-gradient(circle,rgba(48, 48, 45, 1) 0%, rgba(0, 0, 0, 1) 50%)
     }
 
     #art {
-        @apply container mx-auto h-screen relative pt-40 md:pt-24;
+        @apply container mx-auto h-screen relative pt-12 md:pt-12;
 
         h2 {
             @apply text-6xl md:text-7xl 2xl:text-8xl font-clash font-bold text-center tracking-wide ;
         }
 
         div {
-            @apply absolute bottom-40 md:bottom-30 lg:bottom-10 w-full;
+            @apply absolute bottom-20 md:bottom-10 lg:bottom-5 w-full;
         }
 
         div h2 {
-            @apply text-5xl font-clash font-semibold text-center self-start opacity-0;
+            @apply text-4xl font-clash font-semibold text-center self-start opacity-0;
         }
     }
 
     #comments {
-        @apply container p-16 rounded-4xl mx-auto my-42 space-y-20;
+        @apply container p-16 rounded-4xl mx-auto mt-32 space-y-12;
 
 
         h2 {
@@ -155,32 +155,43 @@ background: radial-gradient(circle,rgba(48, 48, 45, 1) 0%, rgba(0, 0, 0, 1) 50%)
         }
 
         .comment-list {
-            @apply flex flex-col gap-12;
+            @apply flex flex-col gap-6 w-full;
         }
 
         .comment {
-            @apply bg-gray-950 p-4 rounded-3xl space-y-2 font-arial px-8;
+            @apply w-full bg-gray-950 p-4 rounded-3xl space-y-2 font-arial px-8;
         }
 
         .heading {
             @apply flex justify-between items-center;
         }
 
-        .heading #title {
+        .heading #comment-title {
             @apply text-2xl font-semibold;
         }
 
-        
         #rating span {
             @apply text-amber-500 text-3xl;
         }
 
         .comment #text {
-            @apply text-lg
+            @apply text-lg break-words;
         }
 
         #rating span {
             @apply text-amber-500 text-3xl;
+        }
+    }
+
+    footer {
+        @apply w-full text-center py-12;
+
+        h3 {
+            @apply text-3xl font-clash font-semibold tracking-wide;
+        }
+
+        p {
+            @apply text-lg md:text-xl font-arial;
         }
     }
 

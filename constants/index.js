@@ -36,9 +36,27 @@ export const REVIEWS = [
     name: "Oksana",
     comment: "Beautiful orchard and friendly staff. A great family experience. The apples were fresh and delicious! Definitely recommend this place."
   },
-  // {
-  //   id: 'a2l58n',
-  //   name: "Andrii",
-  //   comment: "Loved the variety of apples available. Will come back next season! The apples were fresh and delicious! Definitely recommend this place. "
-  // }
+  {
+    id: 'a2l58n',
+    name: "Andrii",
+    comment: "Loved the variety of apples available. Will come back next season! The apples were fresh and delicious! Definitely recommend this place. "
+  }
+];
+
+export const SOCIALS = [
+ {
+	name: "Instagram",
+	icon: "/imgs/insta.png",
+	url: "#",
+ },
+ {
+	name: "X (Twitter)",
+	icon: "/imgs/x.png",
+	url: "#",
+ },
+ {
+	name: "Facebook",
+	icon: "/imgs/fb.png",
+	url: "#",
+ },
 ];

@@ -1,13 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
+import { SplitText } from "gsap/all";
 
 export default function Art() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
 
     useGSAP(() => {
         const start = isMobile ? 'top 20%' : 'top top';
-
         const maskTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: '#art',

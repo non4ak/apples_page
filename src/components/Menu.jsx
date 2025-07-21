@@ -39,7 +39,7 @@ export default function Menu() {
 
                     return (
                         <button
-                            className={`${isActive ? 'text-white border-white' : 'text-white/50 border-white/50'} tracking-wide text-base md:text-lg border-b font-arial py-2 w-64 z-100 cursor-pointer hover:text-amber-100/70`}
+                            className={`${isActive ? 'text-white border-white' : 'text-white/50 border-white/50'} tracking-wide text-base md:text-lg border-b font-arial py-2 w-64 z-50 cursor-pointer hover:text-amber-100/70`}
                             onClick={() => goToIndex(index)}
                         >
                             {item.title}

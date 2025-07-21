@@ -1,10 +1,40 @@
 import { SOCIALS } from "../../constants";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
+
 
 export default function Footer() {
+    useGSAP(() => {
+        const splitTitle = new SplitText('.title', {
+            type: "words"
+        })
+
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: 'footer',
+                start: 'top bottom'
+            },
+            ease: 'power1.inOut',
+        })
+
+        timeline
+            .from(splitTitle.words, {
+                yPercent: 100,
+                opacity: 0,
+                stagger: 0.02
+            })
+            .from('footer p, footer h3', {
+                yPercent: 100,
+                opacity: 0,
+                stagger: 0.02
+            })
+    }, []);
+
     return (
         <footer>
             <div className="space-y-6">
-                <h3>Fruitful code. Juicy design.</h3>
+                <h3 className="title">Fruitful code. Juicy design.</h3>
 
                 <div>
                     <p>Powered by apples, built with love, and probably eaten during coding.</p>

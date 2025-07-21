@@ -2,11 +2,11 @@ import { REVIEWS } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useState } from "react";
+import { SplitText } from "gsap/all";
 
 export default function Form() {
     const [comments, setComments] = useState([]);
     const [error, setError] = useState('');
-
 
     useGSAP(() => {
         const timeline = gsap.timeline({
@@ -25,7 +25,14 @@ export default function Form() {
         }, {
             x: -200,
         })
-            .fromTo('#right-apple', { x: 200, duration: 1, ease: 'power1.inOut' }, { x: 100 });
+        .fromTo('#right-apple', { x: 200, duration: 1, ease: 'power1.inOut' }, { x: 100 })
+        .from('#crying-text', {
+            yPercent: 100,
+            opacity: 0,
+            duration: 1.5,
+            ease: 'power1.inOut'
+        });
+
 
     }, []);
 
@@ -76,8 +83,8 @@ export default function Form() {
                             </ul>
                         ) : (
                             <div className="relative flex-center">
-                                <h3 className="abs-center text-5xl font-clash font-semibold top-[15%] md:top-[25%] tracking-wider text-center w-full">No comments yet.</h3>
-                                <img src="/imgs/crying-apple.png" className="" alt="no comments ceyng apple" />
+                                <h3 id="crying-text" className="abs-center text-5xl font-clash font-semibold top-[15%] md:top-[25%] tracking-wider text-center w-full">No comments yet.</h3>
+                                <img src="/imgs/crying-apple.png" className="" alt="no comments crying apple" />
                             </div>
                         )}
                     </div>
@@ -93,7 +100,7 @@ export default function Form() {
                             />
                         </div>
                         <div className="flex flex-col gap-4">
-                            <label htmlFor="comment" className="text-2xl font-arial ont-semibold">Leave a Comment</label>
+                            <label htmlFor="comment" className="text-2xl font-arial font-semibold">Leave a Comment</label>
                             <textarea
                                 name="comment"
                                 id="comment"

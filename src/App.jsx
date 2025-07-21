@@ -18,7 +18,6 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      {/* <Info /> */}
       <Menu />
       <Art />
       <Form />
